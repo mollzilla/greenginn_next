@@ -16,7 +16,7 @@ export default function AppContainer(props) {
         <h1>
           WELCOME TO MY GREENGINN ASSIGNMENT
         </h1>
-        <h4> This will be the main container of the single page App.</h4>
+        <h4> This is the main container of the single page App.</h4>
         <h5> <Link href="/">
           <a>Take me to Index</a>
         </Link>

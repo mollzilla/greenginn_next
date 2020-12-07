@@ -55,3 +55,5 @@ You can read the steps I followed to create the initial React App here:
 
     Added responsivenes to average container via flexbox.
 
+    Was informed that the data to use to get the avg value was "bid". Fortunately, it was the one I had chosen to test the app.
+
