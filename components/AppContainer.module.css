@@ -1,0 +1,11 @@
+.AppContainer {
+  text-align: center;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: flex-start;
+}
+
+.AppContainer h1 {
+  text-align: center;
+  color: red;
+}

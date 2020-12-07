@@ -1,0 +1,59 @@
+.containerItem  {
+  margin: 25px 0;
+  width: 100%;
+}
+
+.averageContainer {
+  display: flex;
+  flex-direction: column;
+  padding: 80px 2px;
+  text-align: center;
+
+}
+
+.averageContainer h2 {
+  margin-bottom: 25px;
+}
+
+.tradingPairsPaper {
+  margin: 10px;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+}
+
+.singleValues {
+  margin: 25px 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: space-evenly;
+  padding: 20px;
+
+}
+
+.averageContainer .singleValues > * {
+  width: 200px;
+}
+
+.average {
+  margin: 20px;
+  padding: 30px;
+  color: #EAEAEA;
+  background:linear-gradient(#117e94,#0f6e81) ;
+  border-radius: 5px;
+  -webkit-box-shadow: 5px 5px 8px -1px rgba(0,0,0,0.43); 
+  box-shadow: 5px 5px 8px -1px rgba(0,0,0,0.43);
+}
+
+.average h3 {
+  font-size: 1.6rem;
+  border-bottom: 1px solid #FFF;
+  padding-bottom: 5px;
+}
+
+.average h4 {
+  font-size: 2rem;
+  padding: 25px 0;
+}
+
