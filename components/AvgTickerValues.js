@@ -20,7 +20,6 @@ export default function AvgTickerValues() {
       ]).then(([data1, data2, data3]) =>  {
         return Promise.all([data1.json(),  data2.json(), data3.json()])
       }).then(([bitstamp, coinbase, bitfinex]) => {
-        console.log("bitstamp", bitstamp, "coinbase", coinbase, "bitfinex", bitfinex)
         setPairsData([
           { 
             name: "bitstamp",
@@ -44,8 +43,6 @@ export default function AvgTickerValues() {
   const getAverageTickerValues = () => {
     if(pairsData.length===3)
     {
-      // console.log(Object.values(pairsData));
-      console.log(pairsData.map(x => x.value))
       let sum = pairsData.reduce((acc, current) => acc+current.value, 0); // divide in 2 lines to make it more readable
       let avg =  sum/pairsData.length;
       setAverageValue(avg.toFixed(2));
