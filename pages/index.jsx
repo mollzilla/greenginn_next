@@ -31,9 +31,7 @@ const Blog = () => {
         <h1>Hello World and Hello GreenJinn!</h1>
         <h3>
           You can chech out my Readme{" "}
-          <Link href="/readme">
-            here
-      </Link>
+          <a href="https://github.com/mollzilla/greenginn_next/blob/server_side_props/README.md">Here</a>
         </h3>
         <h3>
           You can visit the single page app{" "}<Link href="/GJApp/GJApp">
