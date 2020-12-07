@@ -1,4 +1,4 @@
-WELCOME TO MY GREENGINN ASSIGNMENT
+WELCOME TO MY GREENJINN ASSIGNMENT
 
 These are the steps I followed to refactor my react code into Next.js taking advantage of the server side rendering via serverSideProps()
 

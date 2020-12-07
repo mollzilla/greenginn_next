@@ -14,7 +14,7 @@ export default function AppContainer(props) {
     <Layout>
       <Container className={styles.AppContainer} maxWidth="xl">
         <h1>
-          WELCOME TO MY GREENGINN ASSIGNMENT
+          WELCOME TO MY GREENJINN ASSIGNMENT
         </h1>
         <h4> This is the main container of the single page App.</h4>
         <h5> <Link href="/">
