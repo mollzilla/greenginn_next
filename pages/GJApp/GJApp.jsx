@@ -9,8 +9,7 @@ import Grid from '@material-ui/core/Grid';
 
 export default function AppContainer(props) {
 
-  const { pairsData } = props;
-
+  const { pairsData, averageData } = props;
   return (
     <Layout>
       <Container className={styles.AppContainer} maxWidth="xl">
@@ -28,7 +27,7 @@ export default function AppContainer(props) {
           justify="space-evenly"
           alignItems="flex-start"
         >
-          <AvgTickerValues />
+          <AvgTickerValues averageData={averageData} />
           <TradingPairsContainer pairsData={pairsData} />
         </Grid>
       </Container>
@@ -40,20 +39,43 @@ export async function getServerSideProps(context) {
 
 
     let pairsData=[];
-
+    let averageData=[];
     try {    
       let resp = await fetch("https://www.bitstamp.net/api/v2/trading-pairs-info/");
       pairsData=await resp.json();
+
+      await Promise.all(
+        [fetch(`https://cors-anywhere.herokuapp.com/bitstamp.net/api/v2/ticker/btcusd`),
+        fetch(`https://cors-anywhere.herokuapp.com/api.coinbase.com/v2/exchange-rates?currency=BTC`),
+        fetch(`https://cors-anywhere.herokuapp.com/api-pub.bitfinex.com/v2/tickers?symbols=tBTCUSD`)
+      ]).then(([data1, data2, data3]) =>  {
+        console.log(data1.json())
+        return Promise.all([data1.json(),  data2.json(), data3.json()])
+      }).then(([bitstamp, coinbase, bitfinex]) => {
+        averageData = [
+          { 
+            name: "bitstamp",
+            value: parseFloat(bitstamp.bid) 
+          },
+          { name: "coinbase",
+            value: parseFloat(coinbase.data.rates.USD)
+          },
+          { name: "bitfinex",
+            value: bitfinex[0][1] }
+        ];
+      });
+
     } catch (error) {
-      console.log(error)
-    }      
+      console.log(`The following error occured while fetching data: ${error}`)
+    }
 
 
-
+console.log(averageData)
   return {
     props: {
       mili: "mili",
-      pairsData: pairsData
+      pairsData: pairsData,
+      averageData: averageData
     }, // will be passed to the page component as props
   }
 }
