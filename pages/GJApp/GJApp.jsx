@@ -68,8 +68,6 @@ export async function getServerSideProps(context) {
       console.log(`The following error occured while fetching data: ${error}`)
     }
 
-
-console.log(averageData)
   return {
     props: {
       pairsData: pairsData,

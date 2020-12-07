@@ -8,9 +8,7 @@ import CircularProgress from '@material-ui/core/CircularProgress';
 export default function AvgTickerValues(props) {
 
   const { averageData } = props;
-console.log(props)
   const [averageValue, setAverageValue] = useState(0);
-  const [pairsData, setPairsData] = useState([]);
   const [loading, setLoading] = useState(true)
 
   const getAverageTickerValues = () => {
@@ -24,8 +22,6 @@ console.log(props)
   }
 
   useEffect(() => getAverageTickerValues(), [averageData])
-
-  // useEffect(() => fetchTickerValues(), []);
 
   return (
     <div className={styles.containerItem}>
