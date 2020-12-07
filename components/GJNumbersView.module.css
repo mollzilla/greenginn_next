@@ -10,3 +10,9 @@
   grid-template-columns: 1fr 1fr;
   grid-gap: 15px;
 }
+
+@media(min-width:769px) {
+ .pairsList {
+   grid-template-columns: 1fr 1fr 1fr;
+ } 
+}
