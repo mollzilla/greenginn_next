@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import GJNumberLabel from "./GJNumberLabel";
+import styles from './GJNumbersView.module.css'
 import Paper from '@material-ui/core/Paper';
 
 
@@ -43,9 +44,9 @@ export default function GJNumbersView(props) {
 
   return (
     <div>
-      <Paper elevation={3} className="trading-pairs-paper">
+      <Paper elevation={3} className={styles.tradingPairsPaper}>
         <h2>{pair.description ? pair.description : "Please select a pair"}</h2>  
-        <div className="pairs-list">
+        <div className={styles.pairsList}>
           {GJNumberLabels.length>1 && GJNumberLabels.map((GJNumberLabelsArrayElement, i) => 
             <GJNumberLabel {...GJNumberLabelsArrayElement} key={i} />
           )}

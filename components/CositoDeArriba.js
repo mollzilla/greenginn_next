@@ -25,13 +25,17 @@ export default function CositoDeArriba(props) {
             Clear pair selection
           </ColorButton>
         </div>
-        <div className="button-container">
+        <div className={styles.buttonContainer}>
           {pairData.map((onePair, i) =>
             <ColorButton
               onClick={() => { onPairSelect(onePair.url_symbol, onePair.description) }}
               variant="contained"
               color="primary"
-              className={`${onePair.url_symbol===pair.symbol ? "selected pair-button" : "pair-button"}`}
+              className={
+                onePair.url_symbol===pair.symbol ?
+                  styles.selectedPairButton :
+                  styles.pairButton
+              }
               key={i}>
               {onePair.description}
             </ColorButton>

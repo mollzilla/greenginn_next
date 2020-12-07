@@ -1,0 +1,18 @@
+.GJNumberLabel {
+  padding: 10px;
+  color: #EAEAEA;
+  background:linear-gradient(#117e94,#0f6e81) ;
+  border-radius: 3px;
+  -webkit-box-shadow: 5px 5px 8px -1px rgba(0,0,0,0.43); 
+  box-shadow: 5px 5px 8px -1px rgba(0,0,0,0.43);
+}
+
+.GJNumberLabel h4 {
+  text-transform: capitalize;
+}
+
+.value {
+  border-top: 1px solid #EAEAEA;
+  padding-top: 5px;
+  margin-top: 5px;
+}

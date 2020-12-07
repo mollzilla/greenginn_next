@@ -1,0 +1,23 @@
+.containerItem  {
+  margin: 25px 0;
+  width: 100%;
+}
+
+.tradingPairsContainer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+@media(min-width: 1024px) {
+  .containerItem {
+    max-width: 45%;
+  }
+}
+
+@media(min-width: 1440px) {
+  .containerItem {
+    max-width: 650px;
+  }
+}

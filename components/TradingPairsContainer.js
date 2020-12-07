@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import GJNumbersView from "./GJNumbersView";
 import CositoDeArriba from "./CositoDeArriba";
+import styles from './TradingPairsContainer.module.css'
 import Paper from '@material-ui/core/Paper';
 
 
@@ -37,8 +38,8 @@ export default function TradingPairsContainer() {
   useEffect(() => { fetchPairData() }, [])
 
   return (
-    <div  className="container-item">
-      <Paper elevation={3} className="trading-pairs-container">
+    <div  className={styles.containerItem}>
+      <Paper elevation={3} className={styles.tradingPairsContainer}>
         <CositoDeArriba pair={pair} pairData={pairData} handlePairChange={handlePairChange} clearPairSelection={clearPairSelection} />
         <GJNumbersView pair={pair} />
       </Paper>

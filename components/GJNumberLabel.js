@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import styles from './GJNumberLabel.module.css'
 
 export default function GJNumberLabel(props) {
 
@@ -19,9 +20,9 @@ export default function GJNumberLabel(props) {
 
   // console.log(value)
   return (
-    <div className="gj-number-label">
-      <div className="description"><h4>{description}</h4></div>
-    <div className="value">{formatedValue}</div>
+    <div className={styles.GJNumberLabel}>
+      <div className={styles.description}><h4>{description}</h4></div>
+    <div className={styles.value}>{formatedValue}</div>
     </div>
   )
 }
